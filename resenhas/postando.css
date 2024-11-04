@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Great+Vibes&display=swap");
+
+/* Estilos gerais */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  background: url("backgalaxy.gif") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Cabeçalho */
+.cabecalho {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(112, 28, 171, 0.9);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  z-index: 1000; /* Certifica-se de que o cabeçalho fique acima de outros conteúdos */
+}
+
+.cabecalho h1 {
+  font-family: "Great Vibes", serif;
+  font-size: 24px;
+}
+
+.btn-voltar {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  background-color: #701cab;
+  width: 5%;
+  height: 50px;
+  text-align: left;
+  margin: 20px 20px 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  border: 1px solid white;
+  transition: 0.5s;
+}
+
+.btn-voltar:hover {
+  color: #e170f9;
+  background-color: #701cab70;
+  box-shadow: 0 0 5px white;
+}
+
+/* Conteúdo principal */
+.container {
+  padding: 80px 20px 20px; /* Espaçamento superior para não ficar atrás do cabeçalho fixo */
+  max-width: 600px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos do formulário */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input[type="file"],
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+form input[type="file"]:hover,
+form input[type="text"]:hover,
+form input[type="number"]:hover,
+form input[type="date"]:hover,
+form textarea:hover {
+  border-color: #701cab;
+}
+
+form textarea {
+  resize: vertical;
+  height: 150px; /* Ajusta a altura da área de texto */
+}
+
+button {
+  background-color: #701cab;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e170f9;
+}
+
+/* Mensagens de feedback */
+.success-message,
+.error-message {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.success-message {
+  color: green;
+}
+
+.error-message {
+  color: red;
+}
+
+.mensagem {
+  font-family: "Great Vibes", serif;
+  font-size: 30px;
+  margin: 20px 0;
+  padding: 10px;
+  color: #ffffff; /* Cor do texto */
+  border-radius: 5px; /* Borda arredondada */
+  text-align: center; /* Centraliza o texto */
+}
+
+@media (min-width: 300px) {
+  .btn-voltar {
+    width: 20%;
+  }
+  .conteudo {
+    margin-top: 180px;
+  }
+}

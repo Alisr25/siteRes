@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resenhalizando | Login</title>
+    <link rel="stylesheet" href="loginCadastro.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <link rel="shortcut icon" href="iconeS.png" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/cf6fa412bd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <a href="homeR.html" class="btn-voltar"
+      ><i class="bi bi-arrow-left-short"></i
+    ></a>
+
+    <div
+      id="errorPopup"
+      style="
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        border: 1px solid red;
+        padding: 20px;
+        z-index: 1000;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      "
+    >
+      <span id="errorMessage"></span>
+      <button onclick="closePopup()">Fechar</button>
+    </div>
+
+    <div class="container">
+      <!-- Exibir mensagem de sucesso -->
+      <?php if ($message): ?>
+      <p><?php echo $message; ?></p>
+      <?php endif; ?>
+
+      <div class="buttonsForm">
+        <div class="btnColor"></div>
+        <button id="btnSignin">Login</button>
+        <button id="btnSignup">Cadastro</button>
+      </div>
+
+      <form id="signin" action="loginCadastro.php" method="POST">
+        <input
+          type="text"
+          id="username"
+          name="email"
+          placeholder="Email"
+          required
+        />
+        <input
+          type="password"
+          id="password"
+          name="senha"
+          placeholder="Sua senha"
+          required
+        />
+
+        <button type="submit">Entrar</button>
+      </form>
+
+      <form id="signup" action="cadastro.php" method="POST">
+        <input type="text" name="email" placeholder="Email" required />
+        <input type="password" name="senha" placeholder="Sua senha" required />
+        <input
+          type="password"
+          name="confirmar_senha"
+          placeholder="Confirme a senha"
+          required
+        />
+
+        <button type="submit">Cadastrar</button>
+      </form>
+    </div>
+
+    <script src="loginCadastro.js"></script>
+  </body>
+</html>
